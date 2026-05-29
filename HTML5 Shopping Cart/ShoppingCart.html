@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Shopping Cart with HTML5 Storage</title>
+    <link rel="stylesheet" href="StorageStyle.css">
+    <script src="Storage.js"></script>
+</head>
+
+<body onload="doShowAll()">
+    <h1>Shopping Cart with HTML5 Storage Project <img src="Photo/cart.png" width="50" height="50"></h1>
+  
+    <!-- Shopping Cart Input Box -->
+    <form name="ShoppingList">
+        <div id="main">
+            <p>Insert items and quantity for your shopping cart.</p>
+            <table>
+                <tr>
+                    <!-- Input of item and quantity of it -->
+                    <td><b>Item:</b> <input type="text" name="name" placeholder="Name"></td>
+                    <td><b>Quantity:</b> <input type="number" name="data" min="1" placeholder="0"></td>
+                </tr>
+                <tr>
+                    <!-- Save, Update & Delete Button -->
+                    <td colspan="2" class="button-container">
+                        <input type="button" value="Save" onclick="SaveItem()">
+                        <input type="button" value="Update" onclick="ModifyItem()">
+                        <input type="button" value="Delete" onclick="RemoveItem()">
+                    </td>
+                </tr>
+            </table>
+        </div>
+        
+        <!-- Item and Value list -->
+        <div id="items_table">
+            <h3>Shopping List</h3>
+            <table id="list"></table>
+            <p>
+                <label>
+                    <input type="button" value="Clear" onclick="ClearAll()">
+                    <br>
+                    <i>* Delete all items</i>
+                </label>
+            </p>
+        </div>
+    </form>
+</body>
+</html>
